@@ -11,12 +11,10 @@ export class PhotoListComponent implements OnInit {
   photos: any[] = [];
   filter: string = '';
 
-  constructor(
-    private activitedRoute: ActivatedRoute
-  ) { }
+  constructor(private activitedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.photos = this.activitedRoute.snapshot.data
+    this.photos = this.activitedRoute.snapshot.data.photos;
   }
 
 }
